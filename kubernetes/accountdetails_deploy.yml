@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: account-dp
+ labels:
+  app: account-dp-key
+spec:
+ template:
+  metadata:
+   name: account
+   labels:
+    app: account-key
+  spec:
+   containers:
+    - name: account
+      image: account:1.0
+ replicas: 1
+ selector:
+  matchLabels:
+   app: account-key

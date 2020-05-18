@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: balance-dp
+ labels:
+  app: balance-dp-key
+spec:
+ template:
+  metadata:
+   name: balance
+   labels:
+    app: balance-key
+  spec:
+   containers:
+    - name: balance
+      image: balance:1.0
+ replicas: 1
+ selectors:
+  matchLabels:
+   app: balance-key
+   

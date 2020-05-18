@@ -1,0 +1,13 @@
+appVersion: v1
+kind: Service
+metadata:
+ name: balance-service
+ label:
+  app: balance-service-key
+spec:
+ ports:
+  - targetPort: 8010
+    port: 8010
+ selector:
+  app: balance-key
+  
