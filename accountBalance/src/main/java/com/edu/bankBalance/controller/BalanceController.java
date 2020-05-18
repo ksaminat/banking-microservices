@@ -21,8 +21,8 @@ public class BalanceController {
 	BalanceService bs = null;
 	
 	@RequestMapping("/")
-	public String defaultBalance() {
-		return "Welcome to Balance";
+	public String default_method() {
+		return "Welcome to Banking Balance Controller";
 	}
 	
 	@RequestMapping("/balance")
